@@ -192,7 +192,7 @@ module Tapioca
                }
             "T::Array[#{type_for_activerecord_value(column_type.subtype, column_nullability:)}]"
           when ->(type) {
-               defined?(ActiveRecord::Locking::LockingType) &&
+                 defined?(ActiveRecord::Locking::LockingType) &&
                    ActiveRecord::Locking::LockingType === type
                }
             as_non_nilable_if_persisted_and_not_nullable(
